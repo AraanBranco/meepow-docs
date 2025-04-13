@@ -44,6 +44,15 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+    [
+      '@docusaurus/preset-classic',
+      {
+        gtag: {
+          trackingID: 'G-Q5M4HZL4G6',
+          anonymizeIP: true,
+        },
+      },
+    ],
   ],
 
   themeConfig: {
