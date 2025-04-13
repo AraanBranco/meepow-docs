@@ -2,36 +2,20 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
-
 const config: Config = {
   title: 'Meepow',
   tagline: 'Make lobbies easier in Dota 2',
   favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
   url: 'https://mepoow.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'AraanBranco', // Usually your GitHub org/user name.
-  projectName: 'meepow', // Usually your repo name.
-
+  organizationName: 'AraanBranco',
+  projectName: 'meepow',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   presets: [
     [
       'classic',
@@ -44,17 +28,7 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
-    [
-      '@docusaurus/preset-classic',
-      {
-        gtag: {
-          trackingID: 'G-Q5M4HZL4G6',
-          anonymizeIP: true,
-        },
-      },
-    ],
   ],
-
   themeConfig: {
     metadata: [
       { name: 'keywords', content: 'dota2, dota 2, lobbies, bot, automate lobbies, open source, custom lobby dota 2' },
@@ -136,6 +110,15 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  plugins: [
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-Q5M4HZL4G6',
+        anonymizeIP: true,
+      },
+    ],
+  ],
 };
 
 //config.themeConfig.footer.copyright_right = 'Make with ❤️ by Araan Branco for Dota 2 Community';
