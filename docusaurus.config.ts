@@ -6,7 +6,7 @@ const config: Config = {
   title: 'Meepow',
   tagline: 'Make lobbies easier in Dota 2',
   favicon: 'img/favicon.ico',
-  url: 'https://mepoow.io',
+  url: 'https://meepow.io',
   baseUrl: '/',
   organizationName: 'AraanBranco',
   projectName: 'meepow',
